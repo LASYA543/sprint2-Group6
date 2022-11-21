@@ -2,7 +2,7 @@
 #include"functions.h"
 #include"logger.h"
 #include"admin.cpp"
-#include"user.cpp"
+//#include"user.cpp"
 #include"main.cpp"
 #define PORT 8080
 
@@ -106,9 +106,12 @@ int main(int argc, char const* argv[])
     LOG_INIT();
        
 
-        LOG_INFO("welcome");
-        LOG_INFO("\nLogin");
-       
+     /*   LOG_INFO("welcome");
+        LOG_INFO("\nLogin");*/
+    cout<<"             \t\t WELCOME TO TRAVEL BOOKING APP\n\n\n";
+    cout<<"             \t\t  TRAVEL BOOKING APP MENU\n\n\n";
+    cout<<"             \t\t    PRESS ENTER TO CONTINUE....\n\n";
+      
        
 
       LOG_DEINIT();

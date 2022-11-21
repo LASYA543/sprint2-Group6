@@ -1,14 +1,15 @@
 // Main menu
 void travel :: menu(){
-    cout<<"             \t\t WELCOME TO TRAVEL BOOKING APP\n\n\n";
+ /*   cout<<"             \t\t WELCOME TO TRAVEL BOOKING APP\n\n\n";
     cout<<"             \t\t  TRAVEL BOOKING APP MENU\n\n\n";
-    cout<<"             \t\t    PRESS ENTER TO CONTINUE....\n\n";
+    cout<<"             \t\t    PRESS ENTER TO CONTINUE....\n\n";*/
     if(cin.get()=='\n'){
         int choice,ch1,ch2;
         travel obj;
         cout<<"\n Who are You?\n";
         cout<<"1. ADMIN\n";
-        cout<<"2. USER\n\n";
+        cout<<"2. USER\n";
+//	cout<<"3.Back to main Menu\n\n";
         cout<<"Enter any other key for exit\n\n\n";
         cout<<"Enter Your Option\n";
         cin>>choice;
@@ -20,8 +21,8 @@ void travel :: menu(){
                 cout<<"2. Display a Trip\n";
                 cout<<"3. Display a Reservation\n";
                 cout<<"4. Update Trip\n";
-                cout<<"Enter any other key for exit\n\n";
-                //cout<<"Enter your option\n";
+                cout<<"5.Back to Main menu\n\n";
+                cout<<"Enter your option\n";
                 while(1){
                     cout<<"\nENTER UR CHOICE: ";
                     cin>>ch1;
@@ -38,6 +39,9 @@ void travel :: menu(){
                         case 4:
                             obj.admin_modify();
                             break;
+			case 5:
+			    obj.menu();
+			    break;
                         default:
                             exit(0);
                     }
@@ -55,11 +59,12 @@ void travel :: menu(){
             case 1:
             
                 obj.user_login();
-            A:
+            Label:
                 cout<<"\t\tWELCOME USER\n";
                 cout<<"\t1. New Reservation\n";
-                cout<<"\t2. Search Reservation\n";
-                cout<<"\t3. Cancel Reservation\n";
+		cout<<"\t2. choose vehicle\n";
+                cout<<"\t3. Search Reservation\n";
+                cout<<"\t4. Cancel Reservation\n";
                 cout<<"\tEnter any other key for exit\n\n\n";
                 cout<<"\tEnter your option\n";
                 while(1){
@@ -75,9 +80,12 @@ void travel :: menu(){
                             obj.user_writedata();
                             break;
                         case 2:
-                            obj.user_search();
+			    obj.choosevehicle();
                             break;
                         case 3:
+			     obj.user_search();
+                              break;
+			case 4:
                             obj.user_cancel();
                             break;
                         default:
@@ -86,15 +94,21 @@ void travel :: menu(){
                 }
             case 2:
                 obj.user_registration();
-                goto A;
+                goto Label;
                 break;
             default:
                 
                 break;
-        }    
+        }   
+/*	    case 3:
+	     obj.menu();
+	    break; */
         default:
+
             exit(0);
+
     }
+
         
     }
 }
