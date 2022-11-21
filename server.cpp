@@ -6,6 +6,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 //#include <headers.cpp>
+
 using namespace std;
 
 #define PORT 8080
@@ -17,6 +18,23 @@ struct tour{
         char admin_place[MAX_length],admin_code[MAX_length],admin_country[MAX_length],admin_days[MAX_length],admin_prices[MAX_length],admin_payments[MAX_length];
         char user_phone[MAX_length],user_name[MAX_length],user_people[MAX_length],user_date[MAX_length],user_status[MAX_length],user_dcode[MAX_length],user_prices[MAX_length],user_payments[MAX_length];
 };
+class travel{
+	public:
+		travel(){
+			cout<<"travel booking app";
+		}
+		void login();
+};
+
+void travel::login(){
+	int count=0;
+	int client_fd;
+	recv(client_fd, &count, sizeof(count),0 );
+
+     cout<<"login succesful and u can proceed with your bookings/n"<<endl;
+
+}
+
 
 int main(int argc, char const* argv[])
 {
@@ -109,16 +127,17 @@ int opt = 1;
 
  valread = read(new_socket, buffer, 1024);
 
-   
+   /*
   recv(client_fd, &count, sizeof(count),0 );
 
      cout<<"login succesful and u can proceed with your bookings/n"<<endl;
-
+*/
      close(new_socket);
 
     // closing the listening socket
 
     shutdown(server_fd, SHUT_RDWR);
-
+travel t;
+t.login();
     return 0;
 }

@@ -18,6 +18,7 @@ class travel{
 	            void user_package(tour r);
 	            tour user_showpackage(char a[]);
 	            void user_writedata();
+		    void choosevehicle();
 	            void user_display();
 	            void user_search();
 	            void user_cancel();

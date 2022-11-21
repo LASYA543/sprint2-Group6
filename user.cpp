@@ -239,7 +239,79 @@ void travel :: user_display(){
     fp.close();
     return;
 }
+void travel::choosevehicle()
+{
 
+    int choice;
+    cout<<"\n1.car\n2.Bus";
+    cout<<"\nEnter your choice";
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+        int passengers,cabChoice,kilometers,carCost;
+        cout<<"You choosed car";
+        cout << "\n1.Standard Cab - Rs.15 for 1KM" << endl;
+        cout << "\n2.Luxury Cab - Rs.25 per 1KM" << endl;
+
+        cout<<"\n1.Standard car\n2.Luxury car";
+        cout << "\nEnter which kind of cab you need: ";
+        cin >> cabChoice;
+        cout<<"Enter no of passengers";
+        cin>>passengers;
+        cout << "\nEnter Kilometers you have to travel: ";
+        cin >> kilometers;
+        if(cabChoice==1){
+
+        carCost = (kilometers * 15)* passengers;
+        cout << "\nYour tour will cost " << carCost  << endl;
+
+              //  cout << "\nYou have successfully hired standard cab" << endl;
+        }
+        else
+        {
+
+        carCost = (kilometers * 25)*passengers;
+            cout << "\nYour tour will cost " << carCost  << endl;
+           // cout << "\nYou have successfully hired luxury cab" << endl;
+        }
+        break;
+        case 2:
+        int Tourists,Distance,Buscharge,BusChoice;
+        cout<<"You choosed Bus";
+        cout << "\n1.Non-Ac Bus - Rs.12 for 1KM" << endl;
+        cout << "\n2.Ac Bus- Rs. 30 per 1KM" << endl;
+
+        cout<<"\n1.AC\n2.Non-AC";
+        cout << "\nEnter which kind of Busyou need: ";
+        cin >> BusChoice;
+        cout<<"\nEnter no of passengers";
+        cin>>Tourists;
+        cout << "\nEnter Kilometers you have to travel: ";
+        cin >>Distance;
+        if(BusChoice==1){
+
+        Buscharge =(Distance * 12) * Tourists;
+        cout << "\nYour tour will cost " << Buscharge << endl;
+        //cout<<"You have sucessfully Choosed Ac Bus";
+        }
+        else
+        {
+
+        Buscharge =(Distance * 30) * Tourists;
+        cout << "\nYour tour will cost " << Buscharge  << endl;
+        //cout<<"Your Booking is sucessful";
+        }
+        break;
+
+        default:
+        cout<<"\nInvalid choice";
+
+    }
+    cout<<"\nYour Booking is sucessful";
+
+
+}
 //To cancel the data in user package
 void travel :: user_cancel(){
     fstream fp;
