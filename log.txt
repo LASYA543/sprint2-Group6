@@ -1,0 +1,11 @@
+@login 2022-11-22 17:58:24 | INFO    | client.cpp      | main:124 |              		 WELCOME TO TRAVEL BOOKING APP
+
+
+
+@login 2022-11-22 17:58:24 | INFO    | client.cpp      | main:125 |              		  TRAVEL BOOKING APP MENU
+
+
+
+@login 2022-11-22 17:58:24 | INFO    | client.cpp      | main:126 |              		    PRESS ENTER TO CONTINUE....
+
+

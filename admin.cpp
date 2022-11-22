@@ -113,7 +113,7 @@ void travel :: admin_modify(){
     char admin_code[15],data[90];
     int index,indexj,ch;
     tour s[100];
-    fp.open(admin,ios::in);
+    fp.open(admin,ios::out|ios::in);
     if(!fp){
 		cout<<"\nCannot open file";
 		exit(0);
@@ -160,9 +160,9 @@ void travel :: admin_modify(){
                     cin>>s[indexj].admin_prices;
                     break;
 			}
-			break;
-                   
+		break;
             }
+		
     }
    	if(indexj==index){
         cout<<"\n TRIP NOT FOUND";
@@ -170,7 +170,7 @@ void travel :: admin_modify(){
     }
     fp.close();
     fstream fd;
-    fd.open(admin,ios::out|ios::in);
+    fd.open(admin,ios::out| ios::trunc);
     if(!fd){
         cout<<"\nFile Not Found";
         exit(0);
